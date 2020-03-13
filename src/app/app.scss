@@ -1,0 +1,20 @@
+@font-face {
+    font-family: Quicksand_bold;
+    src: url('../assets/fonts/Quicksand_bold.woff2')
+}
+
+p,ion-item,h1,h2,h3,ion-title,ion-label,ion-title,b,ion-footer,button{
+    font-family: Quicksand_bold !important;
+    text-align: justify;
+    margin-bottom:00px;
+    
+  }
+
+ion-footer{
+  text-align:center;}
+
+.titleicon div{
+display:inline-block;
+margin-bottom:10px;
+text-align:center;
+}

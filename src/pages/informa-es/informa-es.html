@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar color='navbarColor'>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+      <ion-title>
+        <img src="../../assets/imgs/logobus.png" width="40px" style="display:inline-block" height="40px"/>
+          Informação do Ônibus
+      </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding id="page9">
+    <ion-row>
+        <div>
+          <ion-badge class="badgeOri">Sua localização</ion-badge>
+        </div>
+        <div>
+          <ion-badge class="badgeDest">Ônibus</ion-badge>
+        </div>
+      </ion-row>
+      <div id="map"></div>
+  <ion-card>
+        <form id="informaEs-form8">
+          <ion-item>
+            <ion-label style="color:#000000;font-size: x-large;text-align:center;" text-wrap>
+              {{onibusInfo.n}}<br/>{{onibusInfo.descricao}}</ion-label>
+          </ion-item>
+          <ion-item>
+              <ion-label style="color:#000000;text-align:left;">
+               Placa: {{onibusInfo.placa}}</ion-label>
+            </ion-item>
+          <ion-item id="informaEs-list-item21" style="color:#ff1111">
+            <ion-icon name="bus" item-left></ion-icon>
+              {{onibusInfo.lotacao}}
+          </ion-item>
+          <ion-item>
+            <p style="color:#000000;font-size:16px;">
+              <strong>
+                Horario de funcionamento:
+              </strong>
+              <br />
+              <strong>
+                {{onibusInfo.hora}}
+              </strong>
+            </p>
+          </ion-item>
+          <ion-item ><ion-label text-wrap>{{onibusInfo.parada1}}</ion-label></ion-item>
+          <ion-item ><ion-label text-wrap>{{onibusInfo.parada2}}</ion-label></ion-item>
+          <ion-item ><ion-label text-wrap>{{onibusInfo.parada3}}</ion-label></ion-item>
+          <ion-item ><ion-label text-wrap>{{onibusInfo.parada4}}</ion-label></ion-item>
+          <ion-item ><ion-label text-wrap>{{onibusInfo.parada5}}</ion-label></ion-item>
+          <ion-item ><ion-label text-wrap>{{onibusInfo.parada6}}</ion-label></ion-item>
+          <ion-item ><ion-label text-wrap>{{onibusInfo.parada7}}</ion-label></ion-item>
+          <ion-item ><ion-label text-wrap>{{onibusInfo.parada8}}</ion-label></ion-item> 
+          <ion-item ><ion-label text-wrap>{{onibusInfo.parada9}}</ion-label></ion-item>
+          <ion-item ><ion-label text-wrap>{{onibusInfo.parada10}}</ion-label></ion-item>
+        </form>
+      </ion-card>
+</ion-content>

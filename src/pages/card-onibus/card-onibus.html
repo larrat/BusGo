@@ -1,0 +1,42 @@
+
+<ion-header>
+  <ion-navbar color='navbarColor'>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+      <ion-title>
+        <img src="../../assets/imgs/logobus.png" width="40px" style="display:inline-block" height="40px"/>
+          Pesquisa por Ônibus
+      </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+  <div *ngIf="onibusDB.length > 0; else estadoVazio">
+  
+  <button outline ion-item *ngFor="let onibus of onibusDB" style="background-color: #FFDAEA !important" (click)="itemclicked(onibus)">
+    <ion-card>  
+      <ion-list>
+        <ion-item style="color: rgb(248, 14, 14)" id="cardOnibus-list-item35">
+          <ion-icon name="bus" item-left></ion-icon>
+          {{onibus.lotacao}}
+        </ion-item>
+        <div id="cardOnibus-markdown26" style="text-align:center;" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;margin-left:10px;margin-right:10px;color:#000000;font-size:17px;" text-wrap>
+            Número: {{onibus.n}} <br/>
+            {{onibus.descricao}} <br/>
+            Placa: {{onibus.placa}}
+          </p>
+        </div>
+      </ion-list>
+    </ion-card>
+  </button>
+
+  
+  
+</div>
+ <ng-template #estadoVazio>
+  <h2>Carregando...</h2>
+ </ng-template>
+</ion-content>

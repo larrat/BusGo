@@ -1,0 +1,22 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-title>
+      &nbsp;&nbsp;&nbsp;
+      <img src="../../assets/imgs/logobus.png" width="40px" style="display:inline-block" height="40px"/>
+      &nbsp;&nbsp;&nbsp;
+      BusGo
+    </ion-title>
+  </ion-header>
+
+  <ion-content>
+    <ion-list > 
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)" color='listColor'>
+        {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

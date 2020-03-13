@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar color='navbarColor'>
+    <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    <ion-title>
+      <img src="../../assets/imgs/logobus.png" width="40px" style="display:inline-block" height="40px"/>
+      Contate_nos
+    </ion-title>
+</ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+      <ion-textarea type="text" rows="6" cols="20" placeholder="Descreva seu problema ou sugestão..."
+      [(ngModel)]="text"></ion-textarea>
+    </ion-item>
+
+  <button (click)="addMsg(text)" ion-button color="assertive" block
+  [disabled]="!text || text.length < 3">
+    Enviar
+  </button>
+</ion-content>
